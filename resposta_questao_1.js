@@ -39,14 +39,15 @@ console.log(isSequential(1243)); // false (não é sequencial)
 /* 
 Explicação:
 
-Contagem de Ocorrências:
-Criei um objeto count para armazenar a contagem de cada número no array.
-Iterei pelo array e incrementamos a contagem de cada número no objeto count.
+Conversão para string: 
+A função começa convertendo o número inteiro para uma string para facilitar a iteração sobre seus dígitos.
 
-Identificação de Duplicados:
-Criei um array duplicates para armazenar os números que aparecem mais de uma vez.
-Iterei pelas chaves do objeto count. Se a contagem de um número for maior que 1, significa que é um número duplicado e o adicionamos ao array duplicates.
+Iteração e Verificação: 
+Em seguida, a função percorre cada dígito, verificando a diferença entre o dígito atual e o anterior. Se a diferença absoluta for maior que 1, a função retorna false imediatamente, pois não é uma sequência válida.
 
-Retorno do Array de Duplicados:
-A função retorna o array duplicates, que contém todos os números que aparecem mais de uma vez no array original.
+Controle de Crescente/Decrescente: 
+Durante a iteração, duas variáveis (isIncreasing e isDecreasing) são usadas para controlar se a sequência é crescente ou decrescente. Estas variáveis são atualizadas conforme a diferença entre os dígitos.
+
+Resultado: 
+No final, a função retorna true se a sequência for válida (crescente ou decrescente), ou false caso contrário.
 */
